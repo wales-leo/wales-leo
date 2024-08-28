@@ -1,0 +1,31 @@
+<!DOTYPE html>
+<html>
+<body>
+<iframe src="https://media1.tenor.com/m/IUK1ElBOwHYAAAAC/love-you.gif" width="442" height="480" frameBorder="0" class="giphy-embed" allowfullscreen></iframe><p><a href =""C:\Users\WALES\Downloads\location_wabpage\Kid GIFs _ Tenor.html"">via GIPHY</a></p>
+
+
+<p>click the button get your coordinates</p>
+
+<button onclick="getlocation()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getlocation() {
+	if (navigation.geolocation){
+		navigator.geolocation.getCurrentPosition(showposition);
+	} else {
+		x.innerHTML = "Geolocation is not supported by this browser.";
+	}
+}
+
+function showposition(position) {
+	x.innerHTML = "Latitude: " + position.coords.Latitude + 
+	"<br>Longitude: " + position.coords.Longitude;
+}
+</script>
+
+</body>
+</html>
